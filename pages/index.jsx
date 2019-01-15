@@ -27,7 +27,7 @@ const ShowLink = ({ show }) => <li>
 const Index = ({ shows }) => <Layout>
   <h1>Batman TV Shows</h1>
   <ul>
-    {shows.map(({ show }) => <ShowLink show={show} />)}
+    {shows.map(({ show }, index) => <ShowLink key={index} show={show} />)}
   </ul>
   <style jsx>{`
     h1 {
